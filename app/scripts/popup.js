@@ -6,10 +6,8 @@ var $ = jQuery;
 // show loading spinner when loading data from API
 $(document).ajaxStart(function () {
   $("#loading-spinner").show();
-  console.log("ajax started");
 }).ajaxStop(function () {
   $("#loading-spinner").hide();
-  console.log("ajax ended");
 });
 
 $('.taq-goto-settings').click(function (event) {
@@ -56,7 +54,6 @@ function getPosition() {
 }
 
 function fetchAdanData(api_url) {
-  console.log("fetchAdanDate(): fetching data from " + api_url);
   return $.get(api_url, function (data) {
     console.log("fetchAdanDate(): data fetched successfully");
   });
@@ -85,7 +82,6 @@ function getHikma() {
           var hikma = data[0].body;
           chrome.storage.sync.set({ hikmaRecord: { hikmaReceivedAtDate: new Date().getDate(), hikma: hikma } });
           resolve(hikma);
-          console.log("Fetched hikma: " + JSON.stringify(data));
         });
       } else {
         resolve(hikma);
@@ -98,8 +94,6 @@ function getMethod() {
   return new Promise(function (resolve) {
     chrome.storage.sync.get('adan_method', function (_ref3) {
       var adan_method = _ref3.adan_method;
-
-      console.log("cached method" + adan_method);
       resolve(adan_method || 2);
     });
   });
@@ -273,7 +267,6 @@ function renderCachedData() {
     var currentDay = _ref4.currentDay;
 
     if (currentDay) {
-      console.log("cached: " + currentDay);
       renderDataInHtml(currentDay);
     }
   });
@@ -283,11 +276,8 @@ async function main() {
   renderKnownValues();
   renderCachedData();
   var dayData = await getData();
-  console.log(dayData);
   cacheData(dayData);
   renderDataInHtml(dayData);
-  console.log("current: " + getCurrentAdan(dayData));
 }
 
-console.log("h")
 main();
