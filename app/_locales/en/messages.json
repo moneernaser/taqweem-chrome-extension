@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Al-Taqweem",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Prayer Times & Hijri Calendar for Chrome",
+    "description": "The description of the application"
+  }
+}

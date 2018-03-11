@@ -1,0 +1,370 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 400px;
+}
+#outer {
+  width: 280px;
+  border: black solid 1px;
+  border-radius: 1%;
+  height: 95%;
+  /* margin: 20px; */
+}
+
+.taq-adan-asr, .taq-adan-sunrise, .taq-adan-duhr, .taq-adan-maghrib, .taq-adan-ishaa {
+  border-right: black solid 1px;
+}
+
+.taq-time-calculation-msg {
+  padding: 0 !important;
+  border-bottom: black solid 1px;
+}
+
+.taq-adan {
+  border: black solid 1px;
+  border-left: none;
+  border-right: none;
+}
+
+.taq-date-row .col-6{
+  padding-bottom: 7px;
+}
+
+.taq-hijri-date {
+  border: black solid 1px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.taq-miladi-date {
+  border: black solid 1px;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+}
+
+.taq-day {
+  font-size: 40px;
+}
+
+.taq-goto-settings {
+  background: #f0f0f0;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  cursor: pointer;
+  color: #4285f4;
+
+}
+
+.taq-goto-settings:hover {
+  background: #d3d3d3;
+}
+
+.taq-year {
+  font-size: 18px;
+  padding: 0 !important;
+}
+
+.day-year-row {
+  border-top: black solid 1px;
+}
+
+.taq-year-hijri {
+  border-right: black solid 1px;
+}
+
+.taq-year-miladi {
+  border-left: black solid 1px;
+}
+
+.taq-year-miladi .taq-value, .taq-year-hijri .taq-value {
+  display: block;
+  margin-top: 3px;
+}
+
+.taq-times-row .col-12 {
+  padding: 0;
+}
+
+.taq-day-year-row {
+  border-top: black solid 1px;
+  font-family: Montserrat;
+}
+
+.taq-miladi-day {
+  font-size: 55px;
+  line-height: 40px;
+  padding: 0!important;
+  margin-top: 16px;
+}
+
+.taq-month-name {
+  font-size: 16px;
+  font-weight: 700;
+  padding-top: 8px;
+}
+
+.taq-hikma-header {
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.block {
+  display: block
+}
+
+.taq-times-row .selected {
+  /* font-weight: 600;
+  outline: black solid 2px; */
+  background-color: rgb(95, 173, 234);
+  color: white;
+}
+
+.selected .taq-time {
+  font-weight: 500;
+}
+
+.selected .row:nth-child(1) {
+  font-weight: bold;
+}
+
+.taq-year {
+  font-weight: 500;
+}
+
+.taq-header {
+  position: relative
+}
+#loading-spinner {
+  display: none;
+  position: absolute;
+  right: 10px;
+}
+
+#time-remaining {
+  position: absolute;
+  color: red;
+  left: 25px;
+}
+
+.radio-green [type="radio"]:checked+label:after {
+  border-color: #00C851;
+  background-color: #00C851;
+}
+/*Gap*/
+
+.radio-green-gap [type="radio"].with-gap:checked+label:before {
+  border-color: #00C851;
+}
+
+.radio-green-gap [type="radio"]:checked+label:after {
+  border-color: #00C851;
+  background-color: #00C851;
+}                
+    
+.taq-options-content {
+  
+  width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 15px;
+  border: 1px dashed #333;
+  background-color: #eee;
+  height: 400px;
+  position: relative;
+  float: left;
+}
+
+.tab-item.selected {
+  outline: 1px solid #eee;
+  background-color: #eee;
+  border-right: none !important;
+  border: 1px dashed #333;
+}
+
+
+.section .setting {
+  display: inline-block;
+  width: 20%;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.section .setting-value {
+  display: inline-block;
+  margin-left: 20%;
+}
+
+.taq-content {
+  padding: 12px;
+  height: 100%;
+}
+.taq-control {
+  float: right;
+  bottom: 14px;
+  right: 14px;
+  position: absolute;
+}
+
+.taq-control input[type="submit"] {
+  font-size: large;
+  width: 80px;
+}
+
+.taq-date-row {
+  font-family: Montserrat;
+}
+
+#time-letter {
+  position: absolute;
+  left: 10px;
+  color: red;
+}
+h1 {
+  border-bottom: 1px solid #d4cdcd;
+  font-size: 14pt;
+  font-weight: normal;
+  margin: 12px 0;
+  padding-bottom: 12px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+
+/* .taq-options .tabs {
+  float: left;
+  margin-left: 10%;
+  margin-top: 6%;
+  display: block;
+  height: 400px;
+}
+
+.taq-options .tab-item {
+  padding: 15px;
+  font-weight: 200;
+  font-size: 14pt;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+ */
+
+
+
+
+
+
+.tabs {
+  margin: 20px;
+  padding: 0;
+	list-style: none;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+}
+
+	.tabs .active-tab {
+		border-top: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+		border-bottom: none;
+		position: relative;
+		color: black;
+  }
+
+		.active-tab:after {
+			width: 100%;
+			height: 2px;
+			position: absolute;
+			content: "";
+			bottom: -0.1em;
+			left: 0;
+			background: white;
+		}
+	
+  
+	.tabs>li {
+		display: inline-block;
+		cursor: pointer;
+		color: #3a5ea7;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 200;
+    
+  }
+  .tabs li:first-child {
+			margin-left: 10px;
+		}
+
+
+.tabs-content {
+	margin: 20px;
+	padding: 0;
+  list-style: none;
+}
+  .tabs-content li {
+    display: none
+  }
+
+
+
+  /* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #8a603d;
+  font-size: 0.9em;
+  color: #6f5452;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-size: 12px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.taq-options .subheader{
+  font-weight: bold;
+}
+
+
+.taq-options-content>div {
+  margin-bottom: 22px;
+}
+
+.features_list {
+  margin-top: 6px;
+}
+
+.features_list ul {
+  list-style-type: initial;
+}
+
+.features_history {
+  display: none;
+}
+
+.features_list li {
+  display: block !important;
+}

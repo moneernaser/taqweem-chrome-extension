@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="styles/main.css" rel="stylesheet">
+</head>
+
+<body class="taq-options">
+  <ul class="tabs">
+    <li class="active-tab">Settings</li>
+    <li class="">About</li>
+  </ul>
+  <ul class="tabs-content">
+    <li style="display: list-item;">
+      <div class="taq-options-content">
+        <div class="section">
+          <span class="setting">Method
+            <span class="tooltip">?
+              <span class="tooltiptext">A prayer times calculation method. Methods identify various schools of thought about how to compute the timings</span>
+            </span>
+          </span>
+          <div class="setting-value">
+            <select id="method_select">
+              <option value="1">Muslim World League</option>
+              <option value="2">Islamic Society of North America</option>
+              <option value="3">Egyptian General Authority of Survey</option>
+              <option value="4">Umm Al-Qura University, Makkah</option>
+              <option value="5">University of Islamic Sciences, Karachi</option>
+              <option value="8">Gulf Region</option>
+              <option value="9">Kuwait</option>
+              <option value="10">Qatar</option>
+              <option value="11">Majlis Ugama Islam Singapura, Singapore</option>
+              <option value="12">Union Organization islamic de France</option>
+            </select>
+          </div>
+        </div>
+        <div class="taq-control">
+          <input type="Submit" value="save" id="submit-settings">
+        </div>
+      </div>
+    </li>
+    <li style="display: none">
+      <div class="taq-options-content">
+        <!-- <div class="cover">
+          <img src="images/cover.png" style="width: 100%;">
+        </div> -->
+        <div class="about">This app mimics the traditional "Taqweem Al Nasr" (تقويم النصر), a wall prayer times calendar used in Palestine</div>
+        <div class="relealse">
+          <span class="subheader">Release:</span>
+          <span class="release_number">0.0.1</span>
+          <div class="features_list">
+            <ul>
+              <li>Prayer times according to geolcation</li>
+              <li>Support for various prayer calculation methods</li>
+              <li>Displaying wisdom sayings (حِكم)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact">
+          <span class="subheader">Contact:</span>
+          <span class="contact-mail">
+            <a href="mailto:taqweemnasr@gmail.com">mail</a>
+          </span>
+        </div>
+        <div class="features_history">
+          <span class="subheader">Previous Releases</span>
+        </div>
+        <div class="contact"></div>
+      </div>
+    </li>
+  </ul>
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/options.js"></script>
+</body>
+
+</html>
