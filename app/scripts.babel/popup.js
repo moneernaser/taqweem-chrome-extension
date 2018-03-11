@@ -46,16 +46,7 @@ function format(str, ...params) {
   });
 }
 
-// function getTimeRemainingTillAdan(adan) {
-//   let now = new Date();
-//   let nextAdanHHMM = formatTime(adan);
-//   let nextAdanHour = parseInt(nextAdanHHMM.split(':')[0]);
-//   let nextAdanMin = parseInt(nextAdanHHMM.split(':')[1]);
-//   let diffInMin = nextAdanHour * 60 + nextAdanMin - now.getHours() * 60 - now.getMinutes();
-//   let diff_hh = Math.floor(diffInMin / 60);
-//   let diff_mm = diffInMin % 60;
-//   return  "-" + diff_hh + ":" + diff_mm;  
-// }
+
 function get_api_url(latitude, longitude, method, month, year) {
   return format(ADHAN_API, latitude, longitude, method, month, year);
 }
@@ -265,13 +256,6 @@ function renderDataInHtml(dayData) {
   $(".taq-hikma-header span").text(title)
   $(".taq-hikma span").text(message)
 
-  // show remaining time untill next adan
-  // let nextAdan = getAdanAfter(currentAdan, dayData);
-  // let timeRemaining = getTimeRemainingTillAdan(nextAdan.time);
-  // let nextAdanLetter = getAdanLetter(nextAdan.name);
-  // $("#time-remaining").text(timeRemaining);
-  // $("#time-letter").text(nextAdanLetter);
-  // console.log("time remaining: " + timeRemaining);
 }
 
 function cacheData(dayData) {
@@ -298,59 +282,4 @@ async function main() {
   console.log("current: " + getCurrentAdan(dayData));
 }
 
-main()
-// chrome.storage.sync.get('total', function (items) {
-//   $('#seedCount').text(items.total || 0);
-// });
-
-//if username does not exist, show username input
-// chrome.storage.sync.get('username', function (items) {
-//   if (!items.username) {
-//     $('.username-input').css('display', 'block');
-//   } else {
-//     $('.username').text(items.username);
-//     $('.greeting').css('display', 'block');
-//   }
-// });
-
-//save username entered
-// $('.username-input').keypress(function (e) {
-//   var key = e.which;
-//   if(key == 13)  // the enter key code
-//   {
-//     var username = $('input[name = username_input_field]').val();
-//     console.log(username);
-//     if (username && (username.trim().length > 0)){
-//       chrome.storage.sync.set({ 'username': username });
-//       $('.username-input').css('display', 'none');
-//       $('.username').text(username);
-//       $('.greeting').css('display', 'block');
-//     }
-//   }
-// });
-
-// show username input when clicking on username
-// $('.username').click(function (event) {
-//   $('.username-input').css('display', 'block');
-//   $('.greeting').css('display', 'none');
-// });
-
-// function OpenShortcut(location)
-// {
-//   chrome.tabs.create({ url: location, active: false });
-// }
-
-
-
-// go to website and facebook page
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.getElementById('wikiseeds_facebook_url').addEventListener('click', function() {
-//     OpenShortcut('https://www.facebook.com/groups/1529232844070480/');
-//   });
-//   document.getElementById('leaderboard_url').addEventListener('click', function() {
-//     OpenShortcut('https://wikiseeds.herokuapp.com/#/tab/leaderboard');
-//   });
-//   document.getElementById('seeds_url').addEventListener('click', function() {
-//     OpenShortcut('https://wikiseeds.herokuapp.com/#/tab/seeds');
-//   });
-// });
+main();
